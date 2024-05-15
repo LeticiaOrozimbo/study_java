@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class ProgramFuncionario {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
@@ -26,14 +26,14 @@ public class ProgramFuncionario {
 			System.out.println("Digite o id: ");
 			int id = sc.nextInt();
 			while(hasId(list,id)) {
-				System.out.println("Este id já existe! Tente novamente");
+				System.out.println("Este id jï¿½ existe! Tente novamente");
 				id = sc.nextInt();
 			}
 			
 			System.out.println("Digite o nome: ");
 			sc.nextLine();
 			String nome = sc.nextLine();
-			System.out.println("Digite o salário: ");
+			System.out.println("Digite o salï¿½rio: ");
 			double salario = sc.nextDouble();
 			System.out.println();
 			
@@ -41,13 +41,13 @@ public class ProgramFuncionario {
 			list.add(funcionario);
 		}
 		
-		System.out.println("Digite o id do funcionário que terá o salário aumentado: ");
+		System.out.println("Digite o id do funcionï¿½rio que terï¿½ o salï¿½rio aumentado: ");
 		int idSalary = sc.nextInt();
 		
 		Funcionario func = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null);
 		
 		if(func == null) {
-			System.out.println("Este id não existe");
+			System.out.println("Este id nï¿½o existe");
 		}else {
 			System.out.println("Enter com  a porcentagem:");
 			double porcentagem = sc.nextDouble();
@@ -55,7 +55,7 @@ public class ProgramFuncionario {
 		}
 		
 		System.out.println();
-		System.out.println("Lista de funcionários: ");
+		System.out.println("Lista de funcionï¿½rios: ");
 		for(Funcionario f : list) {
 			System.out.println(f);
 		}
